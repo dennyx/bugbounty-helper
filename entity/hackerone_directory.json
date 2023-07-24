@@ -1,0 +1,38 @@
+{
+  "data": {
+    "me": null,
+    "teams": {
+      "pageInfo": {
+        "endCursor": "MjU",
+        "hasNextPage": true,
+        "__typename": "PageInfo"
+      },
+      "edges": [
+        {
+          "node": {
+            "id": "Z2lkOi8vaGFja2Vyb25lL0VuZ2FnZW1lbnRzOjpCdWdCb3VudHlQcm9ncmFtLzYzNjg5",
+            "bookmarked": false,
+            "resolved_report_count": 4,
+            "__typename": "Team",
+            "profile_picture": "https://profile-photos.hackerone-user-content.com/variants/icbp2y98jr95a88tqpm5hteqf9bg/5136ed9b2fa7c4d4abbf39fb971047c62d98ec4740a88eb55d7e26373250a937",
+            "name": "Aleo",
+            "handle": "aleo",
+            "submission_state": "open",
+            "triage_active": true,
+            "publicly_visible_retesting": true,
+            "state": "public_mode",
+            "allows_bounty_splitting": false,
+            "external_program": null,
+            "launched_at": "2023-07-17T18:19:28.529Z",
+            "currency": "usd",
+            "base_bounty": 500,
+            "average_bounty_lower_amount": 2000,
+            "average_bounty_upper_amount": 3500
+          },
+          "__typename": "TeamEdge"
+        }
+      ],
+      "__typename": "TeamConnection"
+    }
+  }
+}
