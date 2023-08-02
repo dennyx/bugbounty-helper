@@ -1,0 +1,513 @@
+{
+  "data": {
+    "team": {
+      "id": "Z2lkOi8vaGFja2Vyb25lL0VuZ2FnZW1lbnRzOjpCdWdCb3VudHlQcm9ncmFtLzEz",
+      "structured_scopes_search": {
+        "nodes": [
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC81",
+            "highlight": null,
+            "identifier": "api.hackerone.com",
+            "display_name": "Domain",
+            "instruction": "This is our public API that customers use to read and interact with reports. To look for vulnerabilities in this asset, create a sandboxed program, select HackerOne Professional or HackerOne Enterprise in the Product Edition settings page, and create an API token. This system’s backend is written in Ruby, converts the request to a GraphQL query, and serializes the GraphQL result to JSON.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare",
+              "google_analytics",
+              "jsdelivr"
+            ],
+            "created_at": "2017-06-14T18:18:35.455Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8z",
+            "highlight": null,
+            "identifier": "hackerone.com",
+            "display_name": "Domain",
+            "instruction": "This is our main application that hackers and customers use to interact with each other. It connects with a database that contains information about vulnerability reports, users, and programs. This system’s backend is written in Ruby and exposes data to the client through GraphQL, rendered pages, and JSON endpoints.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [],
+            "created_at": "2017-06-14T18:14:32.949Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xNDk4MA==",
+            "highlight": null,
+            "identifier": "66.232.20.0/23",
+            "display_name": "Cidr",
+            "instruction": "This net block is the origin of all traffic routed through the HackerOne hacker VPN. See the description for *.vpn.hackerone.net for the stack and vulnerabilities we're interested in.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [],
+            "created_at": "2018-09-28T18:46:04.772Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xNDk3OQ==",
+            "highlight": null,
+            "identifier": "*.vpn.hackerone.net",
+            "display_name": "OtherAsset",
+            "instruction": "The HackerOne hacker VPN is used by hackers and HackerOne personnel. We'd be most interested in vulnerabilities that allow you to route traffic to other clients (lack of client isolation), routing traffic to internal HackerOne / Amazon networks, and bypassing [sslsplit](https://github.com/droe/sslsplit). Traffic routed through the VPN will originate from `66.232.20.0/23` or `206.166.248.0/23` (HackerOne netblocks). The VPN is based on OpenVPN.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon web services"
+            ],
+            "created_at": "2018-09-28T18:44:38.839Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5NjA=",
+            "highlight": null,
+            "identifier": "reviewer.pullrequest.com",
+            "display_name": "Domain",
+            "instruction": "Please use your `@wearehackerone.com` email address when signing up.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services",
+              "google font api"
+            ],
+            "created_at": "2022-06-03T14:47:22.848Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC82",
+            "highlight": null,
+            "identifier": "www.hackerone.com",
+            "display_name": "Domain",
+            "instruction": "This is our marketing website. It does not contain any report or customer information. It may store information about hackers, such as information collected through the [penetration tester sign up form](https://www.hackerone.com/hackers/pentest-community-application). The website runs Drupal with a few customizations.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare",
+              "fancybox",
+              "google_analytics",
+              "google tag manager",
+              "jquery",
+              "jsdelivr",
+              "mariadb",
+              "marketo",
+              "nginx",
+              "optimizely",
+              "pantheon",
+              "php",
+              "trustarc",
+              "varnish"
+            ],
+            "created_at": "2017-06-14T18:20:03.407Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5NjQ=",
+            "highlight": null,
+            "identifier": "hackerone-us-west-2-production-attachments.s3-us-west-2.amazonaws.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains attachments of reports and activities. These attachments may contain confidential information. A signed request is required to download an object.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-03T14:51:28.822Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5NTk=",
+            "highlight": null,
+            "identifier": "app.pullrequest.com",
+            "display_name": "Domain",
+            "instruction": "Please use your `@wearehackerone.com` email address when signing up.",
+            "cvss_score": "critical",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "google font api",
+              "nginx"
+            ],
+            "created_at": "2022-06-03T14:47:22.812Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC82OTE3",
+            "highlight": null,
+            "identifier": "errors.hackerone.net",
+            "display_name": "Domain",
+            "instruction": "A separate domain that we use to capture information of client and server side exceptions.",
+            "cvss_score": "high",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare"
+            ],
+            "created_at": "2018-03-13T10:10:38.942Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC82OTE4",
+            "highlight": null,
+            "identifier": "https://*.hackerone-ext-content.com",
+            "display_name": "OtherAsset",
+            "instruction": "This domain is used to serve static marketing assets. No confidential information is stored on these systems. However, it is important to us that these assets cannot be updated by an unauthorized third-party.",
+            "cvss_score": "medium",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [],
+            "created_at": "2018-03-13T10:19:13.561Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTM=",
+            "highlight": null,
+            "identifier": "a5s.hackerone-ext-content.com",
+            "display_name": "Domain",
+            "instruction": "This domain is used to serve static marketing assets. No confidential information is stored on these systems. However, it is important to us that these assets cannot be updated by an unauthorized third-party.",
+            "cvss_score": "medium",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.103Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTU=",
+            "highlight": null,
+            "identifier": "hackerone-ext-content.com",
+            "display_name": "Domain",
+            "instruction": "This domain is used to serve static marketing assets. No confidential information is stored on these systems. However, it is important to us that these assets cannot be updated by an unauthorized third-party.",
+            "cvss_score": "medium",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare",
+              "fancybox",
+              "google tag manager",
+              "jquery",
+              "jsdelivr",
+              "optimizely",
+              "trustarc"
+            ],
+            "created_at": "2022-06-07T12:37:46.154Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTQ=",
+            "highlight": null,
+            "identifier": "b5s.hackerone-ext-content.com",
+            "display_name": "Domain",
+            "instruction": "This domain is used to serve static marketing assets. No confidential information is stored on these systems. However, it is important to us that these assets cannot be updated by an unauthorized third-party.",
+            "cvss_score": "medium",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.130Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NjA=",
+            "highlight": null,
+            "identifier": "hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare",
+              "fancybox",
+              "google tag manager",
+              "jquery",
+              "jsdelivr",
+              "optimizely",
+              "trustarc"
+            ],
+            "created_at": "2022-06-07T12:37:46.284Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC84",
+            "highlight": null,
+            "identifier": "https://*.hackerone-user-content.com/",
+            "display_name": "OtherAsset",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.\n\n",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [],
+            "created_at": "2017-06-14T18:25:23.670Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTg=",
+            "highlight": null,
+            "identifier": "hackathon-photos-us-east-2.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.238Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NjI=",
+            "highlight": null,
+            "identifier": "cover-photos-us-east-2.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.329Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTY=",
+            "highlight": null,
+            "identifier": "hackathon-photos.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.181Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTk=",
+            "highlight": null,
+            "identifier": "profile-photos.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.262Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5NjM=",
+            "highlight": null,
+            "identifier": "ctf.hacker101.com",
+            "display_name": "Domain",
+            "instruction": "The Hacker101 CTF domain, ctf.hacker101.com, is not connected to HackerOne's production environment. It is hosted on Amazon AWS. Users authenticate through HackerOne.com (OAuth). The maximum bounty for any vulnerability on this asset is $500 right now. The CTF challenges itself are not in scope for our bug bounty program.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "bootstrap",
+              "google_analytics",
+              "jquery",
+              "jsdelivr",
+              "rails",
+              "ruby"
+            ],
+            "created_at": "2022-06-03T14:50:11.172Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NTc=",
+            "highlight": null,
+            "identifier": "cover-photos.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.208Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzE4NjE=",
+            "highlight": null,
+            "identifier": "profile-photos-us-east-2.hackerone-user-content.com",
+            "display_name": "Domain",
+            "instruction": "This is an Amazon S3 bucket that contains profile and cover photos of users and programs. It does not contain any highly confidential information and would not impact the main application if it would be unreachable. A signed request is required to download an object.",
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "amazon_cloudfront",
+              "amazon_s3",
+              "amazon web services"
+            ],
+            "created_at": "2022-06-07T12:37:46.306Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8zODQ0NTY=",
+            "highlight": null,
+            "identifier": "hackerone.live",
+            "display_name": "Domain",
+            "instruction": null,
+            "cvss_score": "low",
+            "eligible_for_bounty": true,
+            "eligible_for_submission": true,
+            "asm_system_tags": [
+              "cloudflare",
+              "jsdelivr"
+            ],
+            "created_at": "2023-04-27T23:19:46.993Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5Njg=",
+            "highlight": null,
+            "identifier": "ma.hacker.one",
+            "display_name": "Domain",
+            "instruction": "This asset is hosted by Marketo, and as such these reports should be submitted to them directly.",
+            "cvss_score": "none",
+            "eligible_for_bounty": false,
+            "eligible_for_submission": false,
+            "asm_system_tags": [
+              "cloudflare",
+              "fancybox",
+              "google tag manager",
+              "jquery",
+              "jsdelivr",
+              "optimizely",
+              "trustarc"
+            ],
+            "created_at": "2022-06-03T14:55:31.194Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5Njc=",
+            "highlight": null,
+            "identifier": "info.hacker.one",
+            "display_name": "Domain",
+            "instruction": "This asset is hosted by Unbounce, and as such these reports should be submitted to them via https://unbounce.com/security/.",
+            "cvss_score": "none",
+            "eligible_for_bounty": false,
+            "eligible_for_submission": false,
+            "asm_system_tags": [
+              "cloudflare",
+              "fancybox",
+              "google tag manager",
+              "jquery",
+              "jsdelivr",
+              "optimizely",
+              "trustarc"
+            ],
+            "created_at": "2022-06-03T14:55:31.167Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC80NTUyNTI=",
+            "highlight": null,
+            "identifier": "h1.community",
+            "display_name": "Domain",
+            "instruction": null,
+            "cvss_score": "none",
+            "eligible_for_bounty": false,
+            "eligible_for_submission": false,
+            "asm_system_tags": [
+              "cloud_platform",
+              "google_analytics",
+              "google_maps",
+              "nginx",
+              "polyfill",
+              "youtube"
+            ],
+            "created_at": "2023-07-27T20:21:30.214Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC80NTUyNTM=",
+            "highlight": null,
+            "identifier": "www.h1.community",
+            "display_name": "Domain",
+            "instruction": null,
+            "cvss_score": "none",
+            "eligible_for_bounty": false,
+            "eligible_for_submission": false,
+            "asm_system_tags": [
+              "cloudflare",
+              "google_analytics",
+              "google_maps",
+              "polyfill",
+              "youtube"
+            ],
+            "created_at": "2023-07-27T20:21:30.253Z",
+            "__typename": "StructuredScopeDocument"
+          },
+          {
+            "id": "Z2lkOi8vaGFja2Vyb25lL1N0cnVjdHVyZWRTY29wZXNJbmRleC8xMzA5NjU=",
+            "highlight": null,
+            "identifier": "www.hackeronestatus.com",
+            "display_name": "Domain",
+            "instruction": "This asset is hosted by Atlassian, and as such these reports should be submitted to their program instead via https://bugcrowd.com/statuspage. ",
+            "cvss_score": "none",
+            "eligible_for_bounty": false,
+            "eligible_for_submission": false,
+            "asm_system_tags": [
+              "atlassian statuspage",
+              "fastly",
+              "google_analytics",
+              "jquery",
+              "polyfill",
+              "twitter"
+            ],
+            "created_at": "2022-06-03T14:53:58.005Z",
+            "__typename": "StructuredScopeDocument"
+          }
+        ],
+        "pageInfo": {
+          "startCursor": "MQ",
+          "hasPreviousPage": false,
+          "endCursor": "Mjg",
+          "hasNextPage": false,
+          "__typename": "PageInfo"
+        },
+        "total_count": 28,
+        "__typename": "SearchResultConnection"
+      },
+      "__typename": "Team"
+    }
+  }
+}

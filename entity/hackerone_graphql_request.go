@@ -85,4 +85,64 @@ var (
 		bookmarked
 		__typename
 	}`
+	// Get details on a specific bug bounty program
+	HackeroneGetProgramDetailsRequest = `
+		query PolicySearchStructuredScopesQuery(
+			$handle: String!, 
+			$searchString: String, 
+			$eligibleForSubmission: Boolean, 
+			$eligibleForBounty: Boolean, 
+			$minSeverityScore: SeverityRatingEnum, 
+			$asmTagIds: [Int], 
+			$from: Int, 
+			$size: Int,
+			$sort: SortInput, 
+			$highlight: StructuredScopeHighlightInput) {
+			  team(handle: $handle) {
+				id
+				structured_scopes_search(
+					search_string: $searchString
+					eligible_for_submission: $eligibleForSubmission
+					eligible_for_bounty: $eligibleForBounty
+					min_severity_score: $minSeverityScore
+					asm_tag_ids: $asmTagIds
+					from: $from
+					size: $size
+					sort: $sort
+					highlight: $highlight) {
+						nodes {
+							... on StructuredScopeDocument {
+										id
+										highlight
+										...PolicyScopeStructuredScopeDocument
+										__typename
+									}
+							__typename
+						}
+						pageInfo {
+							startCursor
+							hasPreviousPage
+							endCursor
+							hasNextPage
+							__typename
+						}
+						total_count
+						__typename
+				}
+				__typename
+			  }
+		}
+		fragment PolicyScopeStructuredScopeDocument on StructuredScopeDocument {
+			id
+			identifier
+			display_name
+			instruction
+			cvss_score
+			eligible_for_bounty
+			eligible_for_submission
+			asm_system_tags
+			created_at
+			__typename
+		}
+	`
 )

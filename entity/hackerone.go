@@ -38,6 +38,37 @@ type HackeroneGetAllProgramsAwardBountyResponse struct {
 	} `json:"teams"`
 }
 
+type HackeroneGetProgramDetailsResponse struct {
+	Team struct {
+		ID                     string `json:"id"`
+		StructuredScopesSearch struct {
+			Nodes []struct {
+				ID                    string   `json:"id"`
+				Highlight             string   `json:"highlight"`
+				Identifier            string   `json:"identifier"`
+				DisplayName           string   `json:"display_name"`
+				Instruction           string   `json:"instruction"`
+				CVSSScore             string   `json:"cvss_score"`
+				EligibleForBounty     bool     `json:"eligible_for_bounty"`
+				EligibleForSubmission bool     `json:"eligible_for_submission"`
+				ASMSystemTags         []string `json:"asm_system_tags"`
+				CreatedAt             string   `json:"created_at"`
+				Typename              string   `json:"__typename"`
+			} `json:"nodes"`
+			PageInfo struct {
+				StartCursor     string `json:"startCursor"`
+				HasPreviousPage bool   `json:"hasPreviousPage"`
+				EndCursor       string `json:"endCursor"`
+				HasNextPage     bool   `json:"hasNextPage"`
+				Typename        string `json:"__typename"`
+			} `json:"pageInfo"`
+			TotalCount int    `json:"totalCount"`
+			Typename   string `json:"__typename"`
+		} `json:"structured_scopes_search"`
+		Typename string `json:"__typename"`
+	} `json:"team"`
+}
+
 type TeamTableResolvedReports struct {
 	ID       string `json:"id"`
 	Reported int    `json:"resolved_report_count"`
